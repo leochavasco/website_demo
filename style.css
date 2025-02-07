@@ -1,120 +1,228 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soluções digitais inovadoras para seu negócio">
-    <title>TechSolutions | Transformação Digital</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">TechSolutions</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
+/* Reset e Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Transforme seu negócio com soluções digitais</h1>
-            <p>Tecnologia, criatividade e resultados mensuráveis</p>
-            <a href="#contato" class="cta-btn">Agende uma consultoria</a>
-        </div>
-    </section>
+html {
+    scroll-behavior: smooth;
+}
 
-    <!-- Serviços -->
-    <section id="servicos" class="services">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="grid">
-                <div class="card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Consultoria Estratégica</h3>
-                    <p>Planejamento digital personalizado para alavancar seus resultados</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-palette"></i>
-                    <h3>Design Profissional</h3>
-                    <p>Identidade visual moderna e interfaces intuitivas</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-code"></i>
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Sites rápidos, seguros e otimizados para SEO</p>
-                </div>
-            </div>
-        </div>
-    </section>
+body {
+    line-height: 1.6;
+    color: #333;
+}
 
-    <!-- Portfólio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Cases de Sucesso</h2>
-            <div class="grid">
-                <div class="portfolio-item">
-                    <img src="https://source.unsplash.com/random/800x600?tech,startup" alt="Projeto 1">
-                    <div class="overlay">
-                        <h3>Startup Tech</h3>
-                        <p>Plataforma SaaS completa</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://source.unsplash.com/random/800x600?ecommerce" alt="Projeto 2">
-                    <div class="overlay">
-                        <h3>E-commerce</h3>
-                        <p>Loja virtual de alta conversão</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://source.unsplash.com/random/800x600?mobile" alt="Projeto 3">
-                    <div class="overlay">
-                        <h3>App Mobile</h3>
-                        <p>Solução multiplataforma</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <!-- Contato -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2>Vamos Conversar</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</p>
-                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
-                    <p><i class="fas fa-envelope"></i> contato@techsolutions.com</p>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <textarea placeholder="Mensagem" rows="5" required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
-            </div>
-        </div>
-    </section>
+/* Navbar */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 TechSolutions. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-</body>
-</html>
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2A2A2A;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2A2A2A;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #007bff, #00ff88);
+    color: white;
+    padding: 160px 0 100px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    background: white;
+    color: #007bff;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Serviços */
+.services {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Portfólio */
+.portfolio {
+    padding: 100px 0;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,123,255,0.9);
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover .overlay {
+    transform: translateY(0);
+}
+
+/* Contato */
+.contact {
+    background: #f8f9fa;
+    padding: 100px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.social {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.social a {
+    color: #007bff;
+    font-size: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #007bff;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #2A2A2A;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
